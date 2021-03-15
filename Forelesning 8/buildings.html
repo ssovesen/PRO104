@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buildings</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script defer type="module" src="./scripts/index/buildings.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+
+        <nav id="navbar-output" class="navbar is-spaced"></nav>
+    
+        <main>
+            <div class="section">
+                    <h1 class="subtitle">Search for building type</h1>
+                    <div class="columns">
+                        <div class="column">
+                            <input id="building-input"type="text" class="input" placeholder = "Living Space eller Military building">
+                        </div>
+                        <div class="column">
+                            <button type="submit" id="search-button"class="button search-button is-primary">Search</button>
+                        </div>
+                   </div>
+                </div>
+            <div class="section">
+                <div class="columns">
+                    <section class="column is-10">
+                        <h2 class = "subtitle">Available buildings</h2>
+                        <div id = "building-output" class="columns is-multiline is-centered"></div>
+                    </section>
+                    <section class="column">
+                        <h2 class="subtitle">Shopping cart:</h2>
+                        <div id="building-output-cart" class="column is-narrow"></div>
+                        <ul id="building-output-cart-sum"></ul>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script type="text/javascript" src ="./scripts/index/nav.js"></script>
+</body>
+</html>
+ 

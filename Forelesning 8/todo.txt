@@ -1,0 +1,16 @@
+[x] Bygge modul for warriors
+[x] Lage html skjelett for warriors
+[x] Lage js for warriors
+[x] Legge inn søkefunksjon på buildings. 
+[x] Legge opp til columns på buildings
+[x] Fikse cards på warrior type
+[x] fikse heading på warrior type
+[x]  legge til pris på bygninger
+
+---
+
+[x] Justere størrelse på buildings.js, sånn at alt er på linje. 
+[x] Endre størrelse på input feltet i buildings
+[ ] legge inn meny på mobil
+[x ] Legge inn funksjon som lar deg velge hvilken bygning krigeren holder til i. (Dropdown meny som endrer building verdien)
+[] Legge inn popup om man vinner eller ikke i warrior-types. 

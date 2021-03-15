@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warriors</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script defer type="module" src="./scripts/index/warrior-types.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+
+        <nav id="navbar-output" class="navbar is-spaced"></nav>
+    
+        <main class="section columns">
+
+            <section class= "column">
+                <h2 class = "subtitle">Available Warriors</h2>
+                <div id = "warrior-types" class="columns is-multiline"></div>
+
+            </section>
+            <section class="column">
+                <h2 class = "subtitle">Chosen warrior</h2>
+                <div id = "chosen-warrior" class="columns is-multiline"></div>
+            </section>
+            <button id="battleButton" class="button">Battle!</button>
+        </main>
+    </div>
+    <script type="text/javascript" src ="./scripts/index/nav.js"></script>
+</body>
+</html>
