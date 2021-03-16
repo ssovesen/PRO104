@@ -12,21 +12,32 @@
 <body>
     
     <div class="container">
-
         <nav id="navbar-output" class="navbar is-spaced"></nav>
-    
-        <main class="section columns">
+        <main>
+            <div class="modal">
+                <div class="modal-background">
 
+                </div>
+                <div class="modal-content">
+                    <div class="box">
+                    <h1 id="battleOutput" class="title"></h1>
+                    </div>
+                </div>
+                <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+        <div class="section columns">
             <section class= "column">
                 <h2 class = "subtitle">Available Warriors</h2>
                 <div id = "warrior-types" class="columns is-multiline"></div>
-
             </section>
             <section class="column">
                 <h2 class = "subtitle">Chosen warrior</h2>
                 <div id = "chosen-warrior" class="columns is-multiline"></div>
             </section>
-            <button id="battleButton" class="button">Battle!</button>
+        </div>
+        <section class="section">
+            <button id="battleButton" class="button is-large is-fullwidth is-danger">Battle!</button>
+        </section> 
         </main>
     </div>
     <script type="text/javascript" src ="./scripts/index/nav.js"></script>

@@ -3,6 +3,8 @@ import warriorTypeModule from '../modules/WarriorTypeModule.js';
 const warriorOutput = document.querySelector("#warrior-types");
 const warriorChosenOutput = document.querySelector("#chosen-warrior");
 const battleButton = document.querySelector("#battleButton");
+const modalActive = document.querySelector('.modal');
+const battleOutput = document.querySelector('#battleOutput');
 let totalDamage = 0; 
 
 const addDamage = (damage) => {
@@ -17,11 +19,25 @@ battleButton.addEventListener("click", function(){
     let enemyDamage = Math.floor(Math.random()*100)+ 1;
     console.log('TotalDamage',totalDamage, "enemyDamage", enemyDamage)
     
+    
     if (totalDamage > enemyDamage) {
+        modalActive.classList.add('is-active');
+        battleOutput.innerHTML = "You Win!";
+        closeButton();
         return console.log('win');
     } else if (totalDamage < enemyDamage)
+        modalActive.classList.add('is-active');
+         battleOutput.innerHTML = "You Lose!";
+         closeButton();
         return console.log('Loss');
 } ) ;
+
+const closeButton = () => {
+    document.querySelector('.modal-close').addEventListener('click', function(){
+         modalActive.classList.remove('is-active');
+
+    });
+}
 
 
 
@@ -47,7 +63,7 @@ const generateWarriorTypes = () => {
                     </div><br>
                     <h2 class="text">${warrior.weapon}</h2><br>
                     <div class="card-footer">
-                        <button data-damage="${warrior.damage}" data-image="${warrior.image}" class="card-footer-item button is-primary">Add Warrior</button>
+                        <button data-damage="${warrior.damage}" data-image="${warrior.image}" class="card-footer-item button warrior-button is-primary">Add Warrior</button>
                         
                     </div>
                 </div> 
@@ -60,10 +76,10 @@ const generateWarriorTypes = () => {
 
 
 
-document.querySelectorAll("button:not(#battleButton)").forEach( button => {
+document.querySelectorAll(".warrior-button").forEach( button => {
 
+    console.log('Buttons fetched');
     button.addEventListener("click", ( e ) => { 
-
         warriorChosenOutput.innerHTML += `<div class="column is-3 card m-2">
         <img src="../images/warriors/${e.currentTarget.dataset.image}">`
 
