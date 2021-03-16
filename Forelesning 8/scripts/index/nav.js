@@ -25,9 +25,6 @@ const generateNavbar = () => {
                 
             </div
         </div>
-        
-    
-    
     
     `;
 };

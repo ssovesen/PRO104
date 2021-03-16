@@ -11,13 +11,13 @@ const generateWarriors = () => {
     WarriorModule.getAllWarriors().forEach((warrior) => {
     
     htmlTxt += `
-    <div class="column is-2-tablet is-3-desktop">
+    <div class="column is-4-tablet is-3-desktop">
         <div class="card">
             <div class="card-header">
                 <h1 class="card-header-title">${warrior.name}</h1>
             </div>
             <div class="image is-4by5">
-                <img class ="card-image" src="../images/warriors/${warrior.image}">
+                <img class ="card-image p-5" src="../images/warriors/${warrior.image}">
             </div>
             <div class="card-content">
                 <h2 class="text is-size-5">Age: ${warrior.age}</h2>
